@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\De.Pazos.Agustin\\De.Pazos.Agustin.csproj": {}
+    "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\De.Pazos.Agustin\\De.Pazos.Agustin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\De.Pazos.Agustin\\De.Pazos.Agustin.csproj": {
+    "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\De.Pazos.Agustin\\De.Pazos.Agustin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\De.Pazos.Agustin\\De.Pazos.Agustin.csproj",
+        "projectUniqueName": "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\De.Pazos.Agustin\\De.Pazos.Agustin.csproj",
         "projectName": "De.Pazos.Agustin",
-        "projectPath": "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\De.Pazos.Agustin\\De.Pazos.Agustin.csproj",
+        "projectPath": "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\De.Pazos.Agustin\\De.Pazos.Agustin.csproj",
         "packagesPath": "C:\\Users\\Agus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\De.Pazos.Agustin\\obj\\",
+        "outputPath": "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\De.Pazos.Agustin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Agus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\Entidades\\Entidades.csproj"
+              "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\Agus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Agus\\source\\repos\\De.Pazos.Agustin\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Agus\\AppData\\Roaming\\NuGet\\NuGet.Config",

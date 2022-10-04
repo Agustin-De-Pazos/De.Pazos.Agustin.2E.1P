@@ -44,8 +44,6 @@ namespace De.Pazos.Agustin
                             DialogResult resultadoadmin = admin.ShowDialog();
                             materias = admin.materias;
                             contraseña = admin.contraseña;
-
-                            
                             break;
                         case EPermisos.Alumno:
                             MenuAlumno alumno = new MenuAlumno(materias,(Alumno)item.Value);

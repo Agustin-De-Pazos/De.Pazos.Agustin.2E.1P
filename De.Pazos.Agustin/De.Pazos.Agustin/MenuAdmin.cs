@@ -12,7 +12,9 @@ namespace De.Pazos.Agustin
         public Dictionary<string, Usuario> contraseña;
         public Usuario unAdmin;
         //public Materia materia;
-        
+
+
+
 
         public MenuAdmin(List<Materia> materias, List<Usuario> usuarios, Usuario unAdmin, Dictionary<string, Usuario> contraseña)
         {
@@ -28,6 +30,13 @@ namespace De.Pazos.Agustin
             
 
         }
+        private void btn_formInscribir_Click(object sender, EventArgs e)
+        {
+            AdminInscripcionA adminInscripcion = new AdminInscripcionA(this.materias, this.usuarios);
+            DialogResult resultadoadmin = adminInscripcion.ShowDialog();
+
+        }
+
         private void btn_agregarMateria_Click(object sender, EventArgs e)
         {
             string auxStr;

@@ -63,6 +63,8 @@ namespace De.Pazos.Agustin
             this.cmb_cambiarEstadoRyL = new System.Windows.Forms.ComboBox();
             this.btn_refresh = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_formInscribir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_alta
@@ -365,12 +367,23 @@ namespace De.Pazos.Agustin
             this.label2.TabIndex = 34;
             this.label2.Text = "Matematica 1 harcodeado";
             // 
+            // btn_formInscribir
+            // 
+            this.btn_formInscribir.Location = new System.Drawing.Point(1, 3);
+            this.btn_formInscribir.Name = "btn_formInscribir";
+            this.btn_formInscribir.Size = new System.Drawing.Size(233, 29);
+            this.btn_formInscribir.TabIndex = 35;
+            this.btn_formInscribir.Text = "Inscribir Alumnos";
+            this.btn_formInscribir.UseVisualStyleBackColor = true;
+            this.btn_formInscribir.Click += new System.EventHandler(this.btn_formInscribir_Click);
+            // 
             // MenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1539, 374);
+            this.ClientSize = new System.Drawing.Size(1539, 358);
+            this.Controls.Add(this.btn_formInscribir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.cmb_cambiarEstadoRyL);
@@ -448,5 +461,7 @@ namespace De.Pazos.Agustin
         private System.Windows.Forms.ComboBox cmb_cambiarEstadoRyL;
         private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.Label label2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btn_formInscribir;
     }
 }
