@@ -12,8 +12,7 @@ namespace Entidades
         {
 
         }
-        public Admin() :base()
-        { }
+
         public override EPermisos Permisos
         {
             get

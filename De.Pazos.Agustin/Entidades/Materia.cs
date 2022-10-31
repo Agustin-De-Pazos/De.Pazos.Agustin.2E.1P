@@ -19,6 +19,13 @@ namespace Entidades
         {
             alumnos = new List<Alumno>();
         }
+        public Materia(string nombre, ECuatrimestre cuatrimestre) : this()
+        {
+            this.nombre = nombre;
+            this.cuatrimestre = cuatrimestre;
+            this.estado = EStadoProfe.Libre;
+            this.correlativas = "No";
+        }
 
         public Materia(string nombre, ECuatrimestre cuatrimestre, Profesor profesor, string correlativas, EStadoProfe estado) : this()
         {
@@ -42,12 +49,7 @@ namespace Entidades
         //    this.cuatrimestre = cuatrimestre;
         //    this.estado = estado;
         //} 
-        public Materia(string nombre, ECuatrimestre cuatrimestre) : this()
-        {
-            this.nombre = nombre;
-            this.cuatrimestre = cuatrimestre;
-            this.estado = EStadoProfe.Libre;
-        }
+       
 
 
 

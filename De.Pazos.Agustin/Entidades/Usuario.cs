@@ -12,8 +12,7 @@ namespace Entidades
         private int dni;
         private string _pass;
 
-        public Usuario()
-        {}
+
         public Usuario(string gmail, string nombre, string apellido, int dni, string _pass)
         {
             this.gmail = gmail;

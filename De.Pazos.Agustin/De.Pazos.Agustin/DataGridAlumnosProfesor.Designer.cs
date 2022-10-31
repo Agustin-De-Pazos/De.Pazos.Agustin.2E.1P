@@ -38,11 +38,11 @@
             // dgv_alumnosProfe
             // 
             this.dgv_alumnosProfe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_alumnosProfe.Location = new System.Drawing.Point(1, -2);
+            this.dgv_alumnosProfe.Location = new System.Drawing.Point(12, 12);
             this.dgv_alumnosProfe.Name = "dgv_alumnosProfe";
             this.dgv_alumnosProfe.RowHeadersWidth = 51;
             this.dgv_alumnosProfe.RowTemplate.Height = 29;
-            this.dgv_alumnosProfe.Size = new System.Drawing.Size(555, 332);
+            this.dgv_alumnosProfe.Size = new System.Drawing.Size(555, 303);
             this.dgv_alumnosProfe.TabIndex = 0;
             // 
             // lbl_materia

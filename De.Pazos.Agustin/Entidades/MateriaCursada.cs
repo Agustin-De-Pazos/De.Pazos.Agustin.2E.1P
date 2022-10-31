@@ -11,14 +11,6 @@ namespace Entidades
         private eAsistencia _asistencia;
         private eEstadoCursada _estado;
         private eRegularidad _regularidad;
-        
-
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public int NotaPrimerParcial { get => _notaPrimerParcial; set => _notaPrimerParcial = value; }
-        public int NotaSegundoParcial { get => _notaSegundoParcial; set => _notaSegundoParcial = value; }
-        public eAsistencia Asistencia { get => _asistencia; set => _asistencia = value; }
-        public eEstadoCursada Estado { get => _estado; set => _estado = value; }
-        public eRegularidad Regularidad { get => _regularidad; set => _regularidad = value; }
 
         public MateriaCursada(string nombre, int notaPrimerParcial, int notaSegundoParcial,  eAsistencia asistencia, eEstadoCursada estado, eRegularidad regularidad)
                               : this(nombre, estado, eRegularidad.Regular)
@@ -27,8 +19,6 @@ namespace Entidades
             _notaSegundoParcial = notaSegundoParcial;;
             _asistencia = asistencia;
         }
-        public MateriaCursada()
-        { }
 
         public MateriaCursada(string nombre, eEstadoCursada estado, eRegularidad regularidad)
         {
@@ -38,6 +28,12 @@ namespace Entidades
             _asistencia = eAsistencia.Ausente;
         }
 
+        public string Nombre { get => _nombre; set => _nombre = value; }
+        public int NotaPrimerParcial { get => _notaPrimerParcial; set => _notaPrimerParcial = value; }
+        public int NotaSegundoParcial { get => _notaSegundoParcial; set => _notaSegundoParcial = value; }
+        public eAsistencia Asistencia { get => _asistencia; set => _asistencia = value; }
+        public eEstadoCursada Estado { get => _estado; set => _estado = value; }
+        public eRegularidad Regularidad { get => _regularidad; set => _regularidad = value; }
         public static eRegularidad StringRegularidad(string regularidad)
         {
             eRegularidad tipoCuatrimestre = eRegularidad.Regular;

@@ -12,8 +12,7 @@ namespace Entidades
         {
             _examenes = new List<Examen>();
         }
-        public Profesor() : base()
-        { }
+
         public override EPermisos Permisos
         {
             get

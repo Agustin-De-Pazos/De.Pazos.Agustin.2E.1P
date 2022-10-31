@@ -7,12 +7,7 @@ namespace Entidades
         private List<MateriaCursada> _materiasCursadas;
         private int _cantidadMateriasEncurso;
 
-        public Alumno() : base()
-        {
-            _materiasCursadas = new List<MateriaCursada>();
-        }
-        //public Alumno(string gmail, string nombre, string apellido, int dni) : this(gmail, nombre, apellido, dni)
-        //{ }
+
 
         public Alumno(string gmail, string nombre, string apellido, int dni, string pass) : base(gmail, nombre, apellido, dni, pass)
         {

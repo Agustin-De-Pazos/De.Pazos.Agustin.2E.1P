@@ -13,6 +13,7 @@ namespace Entidades
             _materias = new Dictionary<string, Materia>();
             HardcodearDatos();
         }
+
         public static void HardcodearDatos()
         {
             Profesor prof1 = new Profesor("profesor@gmail.com", "Eustacio", "3", 1, "profesor");
@@ -77,6 +78,7 @@ namespace Entidades
             alumno4.HarcodearAlumnos(m4);
         }
 
+
         public static Usuario ValidarUsuario(string usuario, string pass)
         {
             Usuario aux = null;
@@ -94,11 +96,11 @@ namespace Entidades
         }
 
 
-        public static bool DniNoExisteString(string texto)
+        public static bool DniNoExisteString(string dni)
         {
             bool todOk = true;
             int aux;
-            if (int.TryParse(texto, out aux))
+            if (int.TryParse(dni, out aux))
             {
                 if (DniNoExistente(aux))
                 {
