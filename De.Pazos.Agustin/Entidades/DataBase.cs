@@ -317,6 +317,26 @@ namespace Entidades
             }
             return aux;
         }
+        public static Alumno GetAlumnoStringNombreApellido(string nombreCompleto)
+        {
+            List<Alumno> listaAlumno = new List<Alumno>();
+            listaAlumno = GetListAlumnos();
+            Alumno aux = null;
+            if (listaAlumno is not null)
+            {
+                foreach (Alumno item in listaAlumno)
+                {
+                    if ($"{item.Nombre} {item.Apellido}" == nombreCompleto)
+                    {
+                        aux = item;
+                        break;
+                    }
+                }
+            }
+            return aux;
+        }
+
+
 
         public static bool RegularidadAdmin(eRegularidad regularidad, string nombreCompleto, string nombreMateria)
         {

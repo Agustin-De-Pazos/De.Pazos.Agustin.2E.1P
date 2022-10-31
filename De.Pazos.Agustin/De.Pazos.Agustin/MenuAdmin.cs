@@ -47,6 +47,22 @@ namespace De.Pazos.Agustin
             cambiarRegularidadAlumnoAdmin.ShowDialog();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InscribirAlumnoAdmin inscribirAlumnoAdmin = new InscribirAlumnoAdmin();
+            inscribirAlumnoAdmin.ShowDialog();
+        }
 
+        private void btn_calcularPromedio_Click(object sender, EventArgs e)
+        {
+            CalcularPromedioMateria calcularPromedioMateria = new CalcularPromedioMateria();
+            calcularPromedioMateria.ShowDialog();
+        }
+
+        private void btn_calcularNotaPromedio_Click(object sender, EventArgs e)
+        {
+            Calcular_promedio_nota calcular_Promedio_Nota = new Calcular_promedio_nota();
+            calcular_Promedio_Nota.ShowDialog();
+        }
     }
 }

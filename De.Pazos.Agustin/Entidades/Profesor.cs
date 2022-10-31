@@ -64,6 +64,7 @@ namespace Entidades
                                 materiaEnCurso.NotaPrimerParcial = primerNota;
                                 materiaEnCurso.NotaSegundoParcial = segundaNota;
                                 mensaje = "Calificado exitosamente (Aprobo)";
+                                materiaEnCurso.NotaFinal = CalcularPromedio(primerNota, segundaNota);
 
                             }
                             else
@@ -73,6 +74,7 @@ namespace Entidades
                                 materiaEnCurso.NotaPrimerParcial = primerNota;
                                 materiaEnCurso.NotaSegundoParcial = segundaNota;
                                 mensaje = "Calificado exitosamente (Desaprobo)";
+                                materiaEnCurso.NotaFinal = CalcularPromedio(primerNota, segundaNota);
                             }
                         }
                         else
@@ -83,6 +85,7 @@ namespace Entidades
                             materiaEnCurso.NotaPrimerParcial = primerNota;
                             materiaEnCurso.NotaSegundoParcial = segundaNota;
                             mensaje = "Desaprobo: quedo libre";
+                            materiaEnCurso.NotaFinal = CalcularPromedio(primerNota, segundaNota);
                         }
 
                     }
@@ -93,6 +96,7 @@ namespace Entidades
                         materiaEnCurso.NotaPrimerParcial = primerNota;
                         materiaEnCurso.NotaSegundoParcial = segundaNota;
                         mensaje = "Desaprobo: quedo libre";
+                        materiaEnCurso.NotaFinal = CalcularPromedio(primerNota, segundaNota);
                     }
                 }
 
@@ -109,6 +113,17 @@ namespace Entidades
         public override string ToString()
         {
             return Nombre;
+        }
+        public static int CalcularPromedio(int n1,int n2)
+        {
+            int promedio = 0;
+            int total;
+            total = n1 + n2;
+            if(total != 0)
+            {
+                promedio = total /2;
+            }
+            return promedio;
         }
     }
 }

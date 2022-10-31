@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Bv3+ldhgPIYJfDbjOtGdr332+Kz71xta8xmUt863jH++xqZwCLXR51IQccOqwmjqQX96xyQLXcIEVIK+1t6q2Q==",
+  "dgSpecHash": "e4Dovt5mev9XeCcsue7qxHvG4Zb6QB20TJyVHyNHoCL7GqazuTOns+FPjyUgbE0vUYFwj1By3g32vzkD6ArM9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Agus\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\Entidades\\Entidades.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\alumno\\Desktop\\De.Pazos.Agustin.2E.1P\\De.Pazos.Agustin\\Entidades\\Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alumno\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\alumno\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\alumno\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

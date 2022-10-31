@@ -105,5 +105,15 @@ namespace De.Pazos.Agustin
                 }
             }
         }
+        public static void CargarListaAlumnosCmB(ComboBox cmb, List<Alumno> listAlumnos)
+        {
+            if (listAlumnos is not null)
+            {
+                foreach (Alumno item in listAlumnos)
+                {
+                    cmb.Items.Add($"{item.Nombre} {item.Apellido}");
+                }
+            }
+        }
     }
 }

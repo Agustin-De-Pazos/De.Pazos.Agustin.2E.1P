@@ -8,6 +8,7 @@ namespace Entidades
         private string _nombre;
         private int _notaPrimerParcial;
         private int _notaSegundoParcial;
+        private int _notaFinal;
         private eAsistencia _asistencia;
         private eEstadoCursada _estado;
         private eRegularidad _regularidad;
@@ -34,6 +35,8 @@ namespace Entidades
         public eAsistencia Asistencia { get => _asistencia; set => _asistencia = value; }
         public eEstadoCursada Estado { get => _estado; set => _estado = value; }
         public eRegularidad Regularidad { get => _regularidad; set => _regularidad = value; }
+        public int NotaFinal { get => _notaFinal; set => _notaFinal = value; }
+
         public static eRegularidad StringRegularidad(string regularidad)
         {
             eRegularidad tipoCuatrimestre = eRegularidad.Regular;

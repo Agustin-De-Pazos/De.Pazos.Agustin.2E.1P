@@ -12,9 +12,6 @@ namespace Entidades
         private List<Alumno> alumnos;
         private string correlativas;
         private EStadoProfe estado;
-
-
-
         public Materia()
         {
             alumnos = new List<Alumno>();
@@ -49,7 +46,7 @@ namespace Entidades
         //    this.cuatrimestre = cuatrimestre;
         //    this.estado = estado;
         //} 
-       
+
 
 
 

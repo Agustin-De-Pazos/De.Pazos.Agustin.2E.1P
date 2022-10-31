@@ -24,6 +24,7 @@ namespace Entidades
         }
 
         public int CantidadMateriasEncurso { get => _cantidadMateriasEncurso; set => _cantidadMateriasEncurso = value; }
+        public List<MateriaCursada> MateriasCursadas { get => _materiasCursadas; set => _materiasCursadas = value; }
 
         public static bool CambiarEstado(Alumno unAlumno, eRegularidad regularidad, string nombreMateria)
         {
@@ -138,6 +139,7 @@ namespace Entidades
             }
             return aux;
         }
+        
         public List<MateriaCursada> GetListMateriasCursadas()
         {
             return _materiasCursadas;

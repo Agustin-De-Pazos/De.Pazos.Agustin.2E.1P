@@ -22,3 +22,15 @@ C:\Users\Agus\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debu
 C:\Users\Agus\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\refint\Entidades.dll
 C:\Users\Agus\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\Entidades.pdb
 C:\Users\Agus\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\alumno\Desktop\De.Pazos.Agustin.2E.1P\De.Pazos.Agustin\Entidades\obj\Debug\net5.0\ref\Entidades.dll
