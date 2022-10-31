@@ -33,9 +33,10 @@ namespace Entidades
 
         public static bool SoloNumeros(string numeros)
         {
-            bool todOk = true;
-            if(numeros is not null)
+            bool todOk = false;
+            if(numeros is not null && numeros != "")
             {
+                todOk = true;
                 foreach (var item in numeros)
                 {
                     if (item < 48 || item > 57)
@@ -46,5 +47,6 @@ namespace Entidades
             }
             return todOk;
         }
+
     }
 }

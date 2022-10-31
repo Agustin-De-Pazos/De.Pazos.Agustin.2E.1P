@@ -30,98 +30,116 @@ namespace De.Pazos.Agustin
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuProfesor));
-            this.lbl_fecha = new System.Windows.Forms.Label();
-            this.lbl_materia = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bnt_crearExamen = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgv_Profesor = new System.Windows.Forms.DataGridView();
+            this.btn_NotaExamen = new System.Windows.Forms.Button();
+            this.btn_crearExamen = new System.Windows.Forms.Button();
+            this.btn_examen = new System.Windows.Forms.Button();
+            this.btn_materias = new System.Windows.Forms.Button();
+            this.bnt_alumnos = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Profesor)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_fecha
+            // dgv_Profesor
             // 
-            this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.Location = new System.Drawing.Point(720, 52);
-            this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(50, 20);
-            this.lbl_fecha.TabIndex = 0;
-            this.lbl_fecha.Text = "Fecha:";
+            this.dgv_Profesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Profesor.Location = new System.Drawing.Point(23, 32);
+            this.dgv_Profesor.Name = "dgv_Profesor";
+            this.dgv_Profesor.RowHeadersWidth = 51;
+            this.dgv_Profesor.RowTemplate.Height = 29;
+            this.dgv_Profesor.Size = new System.Drawing.Size(701, 409);
+            this.dgv_Profesor.TabIndex = 5;
             // 
-            // lbl_materia
+            // btn_NotaExamen
             // 
-            this.lbl_materia.AutoSize = true;
-            this.lbl_materia.Location = new System.Drawing.Point(720, 118);
-            this.lbl_materia.Name = "lbl_materia";
-            this.lbl_materia.Size = new System.Drawing.Size(63, 20);
-            this.lbl_materia.TabIndex = 1;
-            this.lbl_materia.Text = "materia:";
+            this.btn_NotaExamen.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_NotaExamen.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_NotaExamen.Location = new System.Drawing.Point(773, 269);
+            this.btn_NotaExamen.Name = "btn_NotaExamen";
+            this.btn_NotaExamen.Size = new System.Drawing.Size(154, 76);
+            this.btn_NotaExamen.TabIndex = 7;
+            this.btn_NotaExamen.Text = "Evaluar";
+            this.btn_NotaExamen.UseVisualStyleBackColor = true;
+            this.btn_NotaExamen.Click += new System.EventHandler(this.btn_NotaExamen_Click);
             // 
-            // textBox1
+            // btn_crearExamen
             // 
-            this.textBox1.Location = new System.Drawing.Point(793, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 27);
-            this.textBox1.TabIndex = 2;
+            this.btn_crearExamen.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_crearExamen.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_crearExamen.Location = new System.Drawing.Point(773, 184);
+            this.btn_crearExamen.Name = "btn_crearExamen";
+            this.btn_crearExamen.Size = new System.Drawing.Size(154, 79);
+            this.btn_crearExamen.TabIndex = 8;
+            this.btn_crearExamen.Text = "Crear examen";
+            this.btn_crearExamen.UseVisualStyleBackColor = true;
+            this.btn_crearExamen.Click += new System.EventHandler(this.btn_crearExamen_Click);
             // 
-            // comboBox1
+            // btn_examen
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(793, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 28);
-            this.comboBox1.TabIndex = 3;
+            this.btn_examen.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_examen.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_examen.Location = new System.Drawing.Point(773, 367);
+            this.btn_examen.Name = "btn_examen";
+            this.btn_examen.Size = new System.Drawing.Size(154, 74);
+            this.btn_examen.TabIndex = 9;
+            this.btn_examen.Text = "Ver Examenes";
+            this.btn_examen.UseVisualStyleBackColor = true;
+            this.btn_examen.Click += new System.EventHandler(this.btn_examen_Click);
             // 
-            // bnt_crearExamen
+            // btn_materias
             // 
-            this.bnt_crearExamen.Location = new System.Drawing.Point(720, 182);
-            this.bnt_crearExamen.Name = "bnt_crearExamen";
-            this.bnt_crearExamen.Size = new System.Drawing.Size(198, 64);
-            this.bnt_crearExamen.TabIndex = 4;
-            this.bnt_crearExamen.Text = "Crear Examen";
-            this.bnt_crearExamen.UseVisualStyleBackColor = true;
-            this.bnt_crearExamen.Click += new System.EventHandler(this.button1_Click);
+            this.btn_materias.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_materias.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_materias.Location = new System.Drawing.Point(773, 105);
+            this.btn_materias.Name = "btn_materias";
+            this.btn_materias.Size = new System.Drawing.Size(154, 63);
+            this.btn_materias.TabIndex = 10;
+            this.btn_materias.Text = "Materias Profesor";
+            this.btn_materias.UseVisualStyleBackColor = true;
+            this.btn_materias.Click += new System.EventHandler(this.btn_materias_Click);
             // 
-            // dataGridView1
+            // bnt_alumnos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(680, 526);
-            this.dataGridView1.TabIndex = 5;
+            this.bnt_alumnos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bnt_alumnos.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.bnt_alumnos.Location = new System.Drawing.Point(773, 32);
+            this.bnt_alumnos.Name = "bnt_alumnos";
+            this.bnt_alumnos.Size = new System.Drawing.Size(154, 65);
+            this.bnt_alumnos.TabIndex = 11;
+            this.bnt_alumnos.Text = "Ver Alumnos";
+            this.bnt_alumnos.UseVisualStyleBackColor = true;
+            this.bnt_alumnos.Click += new System.EventHandler(this.bnt_alumnos_Click);
             // 
             // MenuProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(983, 531);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.bnt_crearExamen);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lbl_materia);
-            this.Controls.Add(this.lbl_fecha);
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackgroundImage = global::De.Pazos.Agustin.Properties.Resources.imagen1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(984, 474);
+            this.Controls.Add(this.bnt_alumnos);
+            this.Controls.Add(this.btn_materias);
+            this.Controls.Add(this.btn_examen);
+            this.Controls.Add(this.btn_crearExamen);
+            this.Controls.Add(this.btn_NotaExamen);
+            this.Controls.Add(this.dgv_Profesor);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuProfesor";
-            this.Text = "Profesor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu Profesor";
             this.Load += new System.EventHandler(this.MenuProfesor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Profesor)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_fecha;
-        private System.Windows.Forms.Label lbl_materia;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button bnt_crearExamen;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Profesor;
+        private System.Windows.Forms.Button btn_NotaExamen;
+        private System.Windows.Forms.Button btn_crearExamen;
+        private System.Windows.Forms.Button btn_examen;
+        private System.Windows.Forms.Button btn_materias;
+        private System.Windows.Forms.Button bnt_alumnos;
     }
 }

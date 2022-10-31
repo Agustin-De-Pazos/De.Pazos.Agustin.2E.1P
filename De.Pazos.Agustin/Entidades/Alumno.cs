@@ -1,32 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Entidades
 {
     public class Alumno : Usuario
     {
-        private int cantidadMateriasC;
-        private int[] nota= {0,0};
-        private EStadoAlumno[] estado;
-        public Dictionary<string, int> materiasCulminadas;
-        private int[] asistencia = {0,0};
-        private string[] materiasCursadas = {"",""};
+        private List<MateriaCursada> _materiasCursadas;
+        private int _cantidadMateriasEncurso;
 
-
-        public Alumno():base()
+        public Alumno() : base()
         {
+            _materiasCursadas = new List<MateriaCursada>();
         }
         //public Alumno(string gmail, string nombre, string apellido, int dni) : this(gmail, nombre, apellido, dni)
         //{ }
 
-        public Alumno(string gmail, string nombre, string apellido, int dni) : base(gmail, nombre, apellido, dni)
+        public Alumno(string gmail, string nombre, string apellido, int dni, string pass) : base(gmail, nombre, apellido, dni, pass)
         {
-            this.cantidadMateriasC = 0;
-            estado = new EStadoAlumno[2];
-            materiasCulminadas = new Dictionary<string, int>();
+            _materiasCursadas = new List<MateriaCursada>();
+            _cantidadMateriasEncurso = 0;
         }
         public override EPermisos Permisos
         {
@@ -37,53 +28,165 @@ namespace Entidades
 
         }
 
-        public int[] Nota { get => nota; set => nota = value; }
-        public string[] MateriasCursadas { get => materiasCursadas; set => materiasCursadas = value; }
-        public int CantidadMateriasC { get => cantidadMateriasC; set => cantidadMateriasC = value; }
-        public EStadoAlumno[] Estado { get => estado; set => estado = value; }
-        public int[] Asistencia { get => asistencia; set => asistencia = value; }
+        public int CantidadMateriasEncurso { get => _cantidadMateriasEncurso; set => _cantidadMateriasEncurso = value; }
 
-        public static bool MateriasYmateriasRegistradas(Alumno alumno ,string texto)
+        public static bool CambiarEstado(Alumno unAlumno, eRegularidad regularidad, string nombreMateria)
         {
-            bool todOk = false;
-            foreach (string item in alumno.materiasCursadas)
+            bool todoOk = false;
+            foreach (MateriaCursada item in unAlumno._materiasCursadas)
             {
-                if(item == texto)
+                if (item.Nombre == nombreMateria && item.Estado == eEstadoCursada.Cursando)
                 {
-                    todOk = true;
+                    todoOk = true;
+                    item.Regularidad = regularidad;
                 }
             }
-
-            return todOk;
+            return todoOk;
         }
-        public static string RetornaMateriaIgualada(Alumno alumno, string texto)
+
+
+        public void HarcodearAlumnos(MateriaCursada m)
         {
-            string aux = "Null";
-            foreach (string item in alumno.materiasCursadas)
+            this._materiasCursadas.Add(m);
+        }
+
+        public List<MateriaCursada> GetMateriasCursada()
+        {
+            return _materiasCursadas;
+        }
+
+        public static string InscribirseMateria(Alumno unAlumno, string nombreMateria)
+        {
+            string mensaje = null;
+            Materia unaMateria;
+            unaMateria = DataBase.GetMateria(nombreMateria);
+      
+            if (nombreMateria is not null)
             {
-                if (item == texto)
+                if (!(unaMateria == unAlumno))
                 {
-                    aux = item;
+                    if (unaMateria.Correlativas != "No")
+                    {
+                        foreach (MateriaCursada item in unAlumno._materiasCursadas)
+                        {
+                            if (item.Estado == eEstadoCursada.Aprobo && item.Nombre == unaMateria.Nombre)
+                            {
+                                mensaje = $"Aprobo la materia con: {unaMateria.Profesor.Nombre}";
+                            }
+                            if (item.Estado == eEstadoCursada.Aprobo && item.Nombre == unaMateria.Correlativas)
+                            {
+                                if(AddMateriaListAlumnoAddMateriaCursando(unaMateria, unAlumno, nombreMateria))
+                                {
+                                    mensaje = "Materia inscripta";
+                                }
+                            }
+                            else
+                            {
+                                mensaje = "No aprobo la correlativa";
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if(!unAlumno.AproboMateria(nombreMateria))
+                        {
+                            if (AddMateriaListAlumnoAddMateriaCursando(unaMateria, unAlumno, nombreMateria))
+                            {
+                                mensaje = "Materia inscripta";
+                            }
+                            else
+                            {
+                                mensaje = "Ya tiene 2 materias simultaneas";
+                            }
+                        }
+                        else
+                        {
+                            mensaje = "Aprobo Materia";
+                        }
+                    }
+                }
+                else
+                {
+                    mensaje = "Ya esta inscripto";
+                }
+            }
+            return mensaje;
+        }
+
+        public static bool operator ==(Alumno a1, Alumno a2)
+        {
+            bool ok = false;
+            if (a1.Gmail == a2.Gmail)
+            {
+                ok = true;
+            }
+            return ok;
+        }
+        public static bool operator !=(Alumno a1, Alumno a2)
+        {
+            return !(a1 == a2);
+        }
+
+        public MateriaCursada GetMateriaCursada(string unaMateria)
+        {
+            MateriaCursada aux = null;
+            if (unaMateria is not null)
+            {
+                foreach (MateriaCursada item in _materiasCursadas)
+                {
+                    if (item.Estado == eEstadoCursada.Cursando && item.Nombre == unaMateria)
+                    {
+                        aux = item;
+                        break;
+                    }
                 }
             }
             return aux;
         }
-
-        public static bool RetornaSiLaMateriaYaFueTerminada(Alumno a, string texto)
+        public List<MateriaCursada> GetListMateriasCursadas()
         {
-            bool todOk = false;
-            if(texto != null)
+            return _materiasCursadas;
+        }
+        public bool DarAsistencia(string nombreMateria)
+        {
+            bool todoOk = false;
+            MateriaCursada materiaCursada;
+            materiaCursada = GetMateriaCursada(nombreMateria);
+            if (materiaCursada is not null)
             {
-                foreach (KeyValuePair<string,int> item in a.materiasCulminadas)
+                materiaCursada.Asistencia = eAsistencia.Presente;
+                todoOk = true;
+            }
+            return todoOk;
+        }
+
+        public static bool AddMateriaListAlumnoAddMateriaCursando(Materia unaMateria, Alumno unAlumno,  string nombreMateria)
+        {
+            MateriaCursada aux;
+            bool todoOk = false;
+            if (unaMateria + unAlumno)
+            {
+                aux = new(nombreMateria, eEstadoCursada.Cursando, eRegularidad.Regular);
+                unAlumno._materiasCursadas.Add(aux);
+                todoOk = true;
+            }
+            return todoOk;
+        }
+
+        public bool AproboMateria(string nombreMateria)
+        {
+            bool todoOk = false;
+            foreach (MateriaCursada item in _materiasCursadas)
+            {
+                if (item.Estado == eEstadoCursada.Aprobo && item.Nombre == nombreMateria)
                 {
-                    if(texto == item.Key || item.Value < 6)
-                    {
-                        todOk = true;
-                    }
+                    todoOk = true;
+                    break;
                 }
             }
-            return todOk;
+            return todoOk;
         }
     }
+
 }
 

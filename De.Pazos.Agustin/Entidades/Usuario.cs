@@ -10,16 +10,17 @@ namespace Entidades
         private string nombre;
         private string apellido;
         private int dni;
-        private EPermisos permisos;
+        private string _pass;
 
         public Usuario()
         {}
-        public Usuario(string gmail, string nombre, string apellido, int dni)
+        public Usuario(string gmail, string nombre, string apellido, int dni, string _pass)
         {
             this.gmail = gmail;
             this.nombre = nombre;
             this.apellido = apellido;
             this.dni = dni;
+            this._pass = _pass;
         }
         
         public abstract EPermisos Permisos { get; }
@@ -36,36 +37,15 @@ namespace Entidades
         public string Apellido { get => apellido; set => apellido = value; }
         public int Dni { get => dni; set => dni = value; }
 
-        public static bool VerificarGmail(List<Usuario> u, string texto)
+        public bool VerificarPass(string pass)
         {
-            bool todOk = true;
-            foreach (Usuario item in u)
+            bool isOkey = false;
+            if(pass == this._pass)
             {
-                if (item.Gmail == texto)
-                {
-                    todOk = false;
-                }
+                isOkey = true;
             }
-            return todOk;
+            return isOkey;
         }
-        public static bool VerificarDni(List<Usuario> u, string texto)
-        {
-            bool todOk = true;
-            int aux;
-            
-            if (int.TryParse(texto,out aux))
-            {
-                foreach (Usuario item in u)
-                {
-                    if (item.Dni == aux)
-                    {
-                        todOk = false;
-                    }
-                }
-            }
-            return todOk;
-        }
-       
         public static bool operator ==(Usuario u1, Usuario u2)
         {
             return u1.gmail == u2.gmail;
@@ -76,10 +56,7 @@ namespace Entidades
             return !(u1 == u2);
         }
 
-        public virtual string Mostrar()
-        {
-            return (string)this;
-        }
+
 
         public static bool operator +(List<Usuario> u, Usuario a)
         {
@@ -109,20 +86,6 @@ namespace Entidades
         {
             return !(u == a);
         }
-
-        public static explicit operator string(Usuario u)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine($"Gmail: {u.gmail}");
-            sb.AppendLine($"Nombre: {u.nombre}");
-            sb.AppendLine($"Apellido: {u.apellido}");
-            sb.AppendLine($"Apellido: {u.dni}");
-            sb.AppendLine("---------------------");
-
-            return sb.ToString();
-        }
-
 
     }
    

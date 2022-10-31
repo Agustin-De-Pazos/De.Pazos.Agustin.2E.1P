@@ -29,9 +29,8 @@ namespace De.Pazos.Agustin
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
-            this.lbl_usuario = new System.Windows.Forms.Label();
-            this.lbl_contrasena = new System.Windows.Forms.Label();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.lbl_inicioSesion = new System.Windows.Forms.Label();
@@ -39,39 +38,26 @@ namespace De.Pazos.Agustin
             this.btn_adminH = new System.Windows.Forms.Button();
             this.btn_profesorH = new System.Windows.Forms.Button();
             this.btn_alumnoH = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
-            // 
-            // lbl_usuario
-            // 
-            this.lbl_usuario.AutoSize = true;
-            this.lbl_usuario.Location = new System.Drawing.Point(60, 111);
-            this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(59, 20);
-            this.lbl_usuario.TabIndex = 0;
-            this.lbl_usuario.Text = "Usuario";
-            // 
-            // lbl_contrasena
-            // 
-            this.lbl_contrasena.AutoSize = true;
-            this.lbl_contrasena.Location = new System.Drawing.Point(60, 184);
-            this.lbl_contrasena.Name = "lbl_contrasena";
-            this.lbl_contrasena.Size = new System.Drawing.Size(83, 20);
-            this.lbl_contrasena.TabIndex = 1;
-            this.lbl_contrasena.Text = "Contraseña";
             // 
             // txt_usuario
             // 
             this.txt_usuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_usuario.Location = new System.Drawing.Point(166, 101);
+            this.txt_usuario.Location = new System.Drawing.Point(144, 100);
             this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.PlaceholderText = "Email *";
             this.txt_usuario.Size = new System.Drawing.Size(242, 34);
             this.txt_usuario.TabIndex = 2;
+            this.txt_usuario.Tag = "";
             // 
             // txt_contraseña
             // 
             this.txt_contraseña.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_contraseña.Location = new System.Drawing.Point(166, 174);
+            this.txt_contraseña.Location = new System.Drawing.Point(144, 174);
             this.txt_contraseña.Name = "txt_contraseña";
+            this.txt_contraseña.PlaceholderText = "Contraseña *";
             this.txt_contraseña.Size = new System.Drawing.Size(242, 34);
             this.txt_contraseña.TabIndex = 3;
             this.txt_contraseña.Tag = "";
@@ -79,27 +65,34 @@ namespace De.Pazos.Agustin
             // lbl_inicioSesion
             // 
             this.lbl_inicioSesion.AutoSize = true;
-            this.lbl_inicioSesion.Location = new System.Drawing.Point(220, 33);
+            this.lbl_inicioSesion.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_inicioSesion.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_inicioSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_inicioSesion.Location = new System.Drawing.Point(144, 24);
             this.lbl_inicioSesion.Name = "lbl_inicioSesion";
-            this.lbl_inicioSesion.Size = new System.Drawing.Size(113, 20);
+            this.lbl_inicioSesion.Size = new System.Drawing.Size(226, 29);
             this.lbl_inicioSesion.TabIndex = 4;
             this.lbl_inicioSesion.Text = "Inicio de Sesion";
             // 
             // btn_logIn
             // 
-            this.btn_logIn.Location = new System.Drawing.Point(60, 256);
+            this.btn_logIn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_logIn.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_logIn.Location = new System.Drawing.Point(144, 257);
             this.btn_logIn.Name = "btn_logIn";
-            this.btn_logIn.Size = new System.Drawing.Size(348, 29);
-            this.btn_logIn.TabIndex = 5;
+            this.btn_logIn.Size = new System.Drawing.Size(242, 60);
+            this.btn_logIn.TabIndex = 1;
             this.btn_logIn.Text = "Aceptar";
             this.btn_logIn.UseVisualStyleBackColor = true;
             this.btn_logIn.Click += new System.EventHandler(this.btn_logIn_Click);
             // 
             // btn_adminH
             // 
-            this.btn_adminH.Location = new System.Drawing.Point(12, 368);
+            this.btn_adminH.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_adminH.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_adminH.Location = new System.Drawing.Point(12, 349);
             this.btn_adminH.Name = "btn_adminH";
-            this.btn_adminH.Size = new System.Drawing.Size(154, 29);
+            this.btn_adminH.Size = new System.Drawing.Size(154, 63);
             this.btn_adminH.TabIndex = 6;
             this.btn_adminH.Text = "Admin harcodeado";
             this.btn_adminH.UseVisualStyleBackColor = true;
@@ -107,9 +100,11 @@ namespace De.Pazos.Agustin
             // 
             // btn_profesorH
             // 
-            this.btn_profesorH.Location = new System.Drawing.Point(166, 368);
+            this.btn_profesorH.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_profesorH.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_profesorH.Location = new System.Drawing.Point(172, 349);
             this.btn_profesorH.Name = "btn_profesorH";
-            this.btn_profesorH.Size = new System.Drawing.Size(167, 29);
+            this.btn_profesorH.Size = new System.Drawing.Size(167, 63);
             this.btn_profesorH.TabIndex = 7;
             this.btn_profesorH.Text = "Profesor harcodeado";
             this.btn_profesorH.UseVisualStyleBackColor = true;
@@ -117,20 +112,36 @@ namespace De.Pazos.Agustin
             // 
             // btn_alumnoH
             // 
-            this.btn_alumnoH.Location = new System.Drawing.Point(339, 368);
+            this.btn_alumnoH.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_alumnoH.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_alumnoH.Location = new System.Drawing.Point(344, 349);
             this.btn_alumnoH.Name = "btn_alumnoH";
-            this.btn_alumnoH.Size = new System.Drawing.Size(167, 29);
+            this.btn_alumnoH.Size = new System.Drawing.Size(167, 63);
             this.btn_alumnoH.TabIndex = 8;
             this.btn_alumnoH.Text = "Alumno harcodeado";
             this.btn_alumnoH.UseVisualStyleBackColor = true;
             this.btn_alumnoH.Click += new System.EventHandler(this.btn_alumnoH_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(523, 446);
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackgroundImage = global::De.Pazos.Agustin.Properties.Resources.imagen1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(532, 439);
             this.Controls.Add(this.btn_alumnoH);
             this.Controls.Add(this.btn_profesorH);
             this.Controls.Add(this.btn_adminH);
@@ -138,10 +149,9 @@ namespace De.Pazos.Agustin
             this.Controls.Add(this.lbl_inicioSesion);
             this.Controls.Add(this.txt_contraseña);
             this.Controls.Add(this.txt_usuario);
-            this.Controls.Add(this.lbl_contrasena);
-            this.Controls.Add(this.lbl_usuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.ResumeLayout(false);
@@ -150,9 +160,6 @@ namespace De.Pazos.Agustin
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_usuario;
-        private System.Windows.Forms.Label lbl_contrasena;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.TextBox txt_contraseña;
         private System.Windows.Forms.Label lbl_inicioSesion;
@@ -160,5 +167,7 @@ namespace De.Pazos.Agustin
         private System.Windows.Forms.Button btn_adminH;
         private System.Windows.Forms.Button btn_profesorH;
         private System.Windows.Forms.Button btn_alumnoH;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }

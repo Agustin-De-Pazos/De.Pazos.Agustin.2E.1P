@@ -14,34 +14,64 @@ namespace De.Pazos.Agustin
 {
     public partial class MenuProfesor : Form
     {
-        List<Materia> materias;
-        Profesor profe;
-        public MenuProfesor()
+        Profesor _profe;
+        BindingSource bindingSource;
+        public MenuProfesor(Profesor unProfe)
         {
             InitializeComponent();
-        }
-        public MenuProfesor(List<Materia> materias, Profesor unProfe)
-        {
-            InitializeComponent();
-            this.materias = new List<Materia>();
-            this.profe = new Profesor();
-            this.materias = materias;
-            this.profe = unProfe;
+            bindingSource = new BindingSource();
+            _profe = unProfe;
         }
 
         private void MenuProfesor_Load(object sender, EventArgs e)
         {
-
+            List<Materia> list = DataBase.GetProfesorMaterias(_profe);
+            bindingSource.DataSource = list;
+            dgv_Profesor.DataSource = bindingSource;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_NotaExamen_Click(object sender, EventArgs e)
         {
-
+            NotaExamen notaExamen = new NotaExamen(_profe);
+            notaExamen.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_crearExamen_Click(object sender, EventArgs e)
         {
+            List<Materia> aux = DataBase.GetProfesorMaterias(_profe);
+            if (aux is not null)
+            {
+                CrearExamenProfesor crearExamen = new CrearExamenProfesor(_profe);
+                crearExamen.ShowDialog();
+            }
+            
+        }
 
+        private void btn_examen_Click(object sender, EventArgs e)
+        {
+            List<Examen> aux = _profe.ListaExamen();
+            if(aux.Count != 0)
+            {
+                bindingSource.DataSource = aux;
+                dgv_Profesor.DataSource = bindingSource;
+            }
+            else
+            {
+                MessageBox.Show("No creo examenes");
+            }
+        }
+
+        private void bnt_alumnos_Click(object sender, EventArgs e)
+        {
+            DataGridAlumnosProfesor dataGridAlumnosProfesor = new DataGridAlumnosProfesor(_profe);
+            dataGridAlumnosProfesor.ShowDialog();
+        }
+
+        private void btn_materias_Click(object sender, EventArgs e)
+        {
+            List<Materia> list = DataBase.GetProfesorMaterias(_profe);
+            bindingSource.DataSource = list;
+            dgv_Profesor.DataSource = bindingSource;
         }
     }
 }

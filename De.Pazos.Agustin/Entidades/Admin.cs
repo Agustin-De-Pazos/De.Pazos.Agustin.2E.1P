@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Admin : Usuario
     {
-        public Admin(string gmail, string nombre, string apellido, int dni) : base(gmail, nombre, apellido, dni)
+        public Admin(string gmail, string nombre, string apellido, int dni, string pass) : base(gmail, nombre, apellido, dni, pass)
         {
 
         }
